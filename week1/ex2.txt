@@ -1,0 +1,34 @@
+    1  whoiam
+    2  whoami
+    3  mkdkir ~/week1
+    4  mkdir ~/week1
+    5  cd ~/week1
+    6  apt-get install gcc
+    7  sudo apt-get install gcc
+    8  apt-get update 
+    9  sudo apt-get update
+   10  sudo apt-get update 
+   11  sudo apt-get install gcc
+   12  sudo apt-get update
+   13  cd ~/usr/bin
+   14  ls /usr/bin | sort -r | tail > ex1.txt
+   15  nano ex1.txt
+   16  ls
+   17  ls /usr/bin
+   18  ls /usr/bin | sort -r > ex1.txt
+   19  ls
+   20  nano ex1.txt 
+   21  rm ex1.txt 
+   22  ls /usr/bin | grep gcc | sort -r > ex1.txt
+   23  nano ex1.txt 
+   24  git
+   25  git init
+   26  git heli
+   27  git help 
+   28  whoami
+   29  pwd
+   30  ls
+   31  type la
+   32  type ls
+   33  ls
+   34  history > ex2.txt
