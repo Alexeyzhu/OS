@@ -6,7 +6,7 @@
 
 void swap(int*, int*);
 
-main() {
+exercise4() {
     int a, b;
     printf("Enter 2 numbers: ");
     scanf("%d %d", &a, &b);

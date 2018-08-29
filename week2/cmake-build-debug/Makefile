@@ -123,32 +123,32 @@ week2/fast:
 	$(MAKE) -f CMakeFiles/week2.dir/build.make CMakeFiles/week2.dir/build
 .PHONY : week2/fast
 
-ex5.o: ex5.c.o
+main.o: main.c.o
 
-.PHONY : ex5.o
+.PHONY : main.o
 
 # target to build an object file
-ex5.c.o:
-	$(MAKE) -f CMakeFiles/week2.dir/build.make CMakeFiles/week2.dir/ex5.c.o
-.PHONY : ex5.c.o
+main.c.o:
+	$(MAKE) -f CMakeFiles/week2.dir/build.make CMakeFiles/week2.dir/main.c.o
+.PHONY : main.c.o
 
-ex5.i: ex5.c.i
+main.i: main.c.i
 
-.PHONY : ex5.i
+.PHONY : main.i
 
 # target to preprocess a source file
-ex5.c.i:
-	$(MAKE) -f CMakeFiles/week2.dir/build.make CMakeFiles/week2.dir/ex5.c.i
-.PHONY : ex5.c.i
+main.c.i:
+	$(MAKE) -f CMakeFiles/week2.dir/build.make CMakeFiles/week2.dir/main.c.i
+.PHONY : main.c.i
 
-ex5.s: ex5.c.s
+main.s: main.c.s
 
-.PHONY : ex5.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-ex5.c.s:
-	$(MAKE) -f CMakeFiles/week2.dir/build.make CMakeFiles/week2.dir/ex5.c.s
-.PHONY : ex5.c.s
+main.c.s:
+	$(MAKE) -f CMakeFiles/week2.dir/build.make CMakeFiles/week2.dir/main.c.s
+.PHONY : main.c.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... week2"
-	@echo "... ex5.o"
-	@echo "... ex5.i"
-	@echo "... ex5.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

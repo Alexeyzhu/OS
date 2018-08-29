@@ -14,7 +14,7 @@ void plane(int *);
 
 int read(int*);
 
-main() {
+exercise5() {
     int height, exit = 1;
     printf("Enter the height of pic: ");
     scanf("%d", &height);

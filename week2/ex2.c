@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <memory.h>
 
-main() {
+exercise2() {
     int l, i = 0;
     char arr[100];
     char *tail, *head;
@@ -25,5 +25,5 @@ main() {
         i++;
     }
 
-    printf("%s", arr);
+    printf("%s\n", arr);
 }

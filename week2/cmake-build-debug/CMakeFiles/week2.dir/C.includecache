@@ -6,7 +6,41 @@
 
 #IncludeRegexTransform: 
 
+/home/alexey/CLionProjects/OS/week2/ex1.c
+stdio.h
+-
+float.h
+-
+limits.h
+-
+
+/home/alexey/CLionProjects/OS/week2/ex2.c
+stdio.h
+-
+memory.h
+-
+
+/home/alexey/CLionProjects/OS/week2/ex3.c
+stdio.h
+-
+
+/home/alexey/CLionProjects/OS/week2/ex4.c
+stdio.h
+-
+
 /home/alexey/CLionProjects/OS/week2/ex5.c
 stdio.h
 -
+
+/home/alexey/CLionProjects/OS/week2/main.c
+ex1.c
+/home/alexey/CLionProjects/OS/week2/ex1.c
+ex2.c
+/home/alexey/CLionProjects/OS/week2/ex2.c
+ex3.c
+/home/alexey/CLionProjects/OS/week2/ex3.c
+ex4.c
+/home/alexey/CLionProjects/OS/week2/ex4.c
+ex5.c
+/home/alexey/CLionProjects/OS/week2/ex5.c
 

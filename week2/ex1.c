@@ -5,7 +5,7 @@
 #include <float.h>
 #include <limits.h>
 
-main(){
+exercise1(){
     int i;
     float f;
     double d;

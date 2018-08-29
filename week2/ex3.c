@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 
-main() {
+exercise3() {
     int height;
     printf("Enter the height of tree: ");
     scanf("%d", &height);
