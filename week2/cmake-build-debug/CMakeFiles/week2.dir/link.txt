@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/week2.dir/ex4.c.o  -o week2 
+/usr/bin/cc -g   CMakeFiles/week2.dir/ex5.c.o  -o week2 

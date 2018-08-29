@@ -57,27 +57,27 @@ include CMakeFiles/week2.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/week2.dir/flags.make
 
-CMakeFiles/week2.dir/ex4.c.o: CMakeFiles/week2.dir/flags.make
-CMakeFiles/week2.dir/ex4.c.o: ../ex4.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alexey/CLionProjects/OS/week2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/week2.dir/ex4.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/week2.dir/ex4.c.o   -c /home/alexey/CLionProjects/OS/week2/ex4.c
+CMakeFiles/week2.dir/ex5.c.o: CMakeFiles/week2.dir/flags.make
+CMakeFiles/week2.dir/ex5.c.o: ../ex5.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alexey/CLionProjects/OS/week2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/week2.dir/ex5.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/week2.dir/ex5.c.o   -c /home/alexey/CLionProjects/OS/week2/ex5.c
 
-CMakeFiles/week2.dir/ex4.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/week2.dir/ex4.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/alexey/CLionProjects/OS/week2/ex4.c > CMakeFiles/week2.dir/ex4.c.i
+CMakeFiles/week2.dir/ex5.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/week2.dir/ex5.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/alexey/CLionProjects/OS/week2/ex5.c > CMakeFiles/week2.dir/ex5.c.i
 
-CMakeFiles/week2.dir/ex4.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/week2.dir/ex4.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/alexey/CLionProjects/OS/week2/ex4.c -o CMakeFiles/week2.dir/ex4.c.s
+CMakeFiles/week2.dir/ex5.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/week2.dir/ex5.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/alexey/CLionProjects/OS/week2/ex5.c -o CMakeFiles/week2.dir/ex5.c.s
 
 # Object files for target week2
 week2_OBJECTS = \
-"CMakeFiles/week2.dir/ex4.c.o"
+"CMakeFiles/week2.dir/ex5.c.o"
 
 # External object files for target week2
 week2_EXTERNAL_OBJECTS =
 
-week2: CMakeFiles/week2.dir/ex4.c.o
+week2: CMakeFiles/week2.dir/ex5.c.o
 week2: CMakeFiles/week2.dir/build.make
 week2: CMakeFiles/week2.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alexey/CLionProjects/OS/week2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable week2"
