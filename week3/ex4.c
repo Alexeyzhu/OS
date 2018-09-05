@@ -2,6 +2,8 @@
 // Created by alexey on 05.09.18.
 //
 
+#include <stdio.h>
+
 void quicksort(int *, int, int);
 
 int partition(int *, int, int);
