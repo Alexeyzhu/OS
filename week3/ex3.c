@@ -24,14 +24,11 @@ void insert_node(struct List *, int);
 
 int delete_node(struct List *, int);
 
+void init(struct List *);
+
 int main() {
     struct List *list1 = malloc(sizeof(struct List));
-    list1->head = NULL;
-    list1->tail = NULL;
-    list1->size = 0;
-
-    insert_node(list1, 1);
-
+    init(list1);
     delete_node(list1, 1);
     delete_node(list1, 8);
     print_list(list1);
@@ -54,11 +51,8 @@ int main() {
     print_list(list1);
 
     struct List *list2 = malloc(sizeof(struct List));
-    list2->head = NULL;
-    list2->tail = NULL;
-    list2->size = 0;
+    init(list2);
 
-    insert_node(list2, 3);
 
     delete_node(list2, 3);
     print_list(list2);
@@ -81,6 +75,12 @@ int main() {
     print_list(list2);
 
     return 0;
+}
+
+void init(struct List *list) {
+    list->head = NULL;
+    list->tail = NULL;
+    list->size = 0;
 }
 
 void print_list(struct List *list) {
