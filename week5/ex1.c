@@ -19,10 +19,10 @@ int main(int argc, char *argv[]) {
     printf("Parallel sequence \n");
 
     for (i = 0; i < number_of_threads; i++) {
-        printf("Main function. Creating thread %d\n", i);
+        printf("Creating thread %d\n", i);
         status = pthread_create(&threads[i], NULL, print_hello_world, (void *) i);
         if (status != 0) {
-            printf("Oops. pthread create returned error code %d\n", status);
+            printf("POops. pthread create returned error code %d\n", status);
             exit(-1);
         }
     }
@@ -36,12 +36,12 @@ int main(int argc, char *argv[]) {
     printf("Ordered sequence\n");
 
     for (i = 0; i < number_of_threads; i++) {
-        printf("Main function. Creating thread %d\n", i);
+        printf("Creating thread %d\n", i);
         status = pthread_create(&threads[i], NULL, print_hello_world, (void *) i);
         pthread_join(threads[i], NULL);
 
         if (status != 0) {
-            printf("Oops. pthread create returned error code %d\n", status);
+            printf("Pthread create returned error code %d\n", status);
             exit(-1);
         }
     }
