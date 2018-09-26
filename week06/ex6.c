@@ -8,7 +8,6 @@
 
 int main() {
     int rw[2];
-    int status1;
     int status2;
 
     if (pipe(rw) < 0) {
@@ -16,7 +15,7 @@ int main() {
     }
 
     int pid1 = fork();
-    int pid2 = -259;
+    int pid2 = -256;
 
     if (pid1 == -1) {
         return -1;
@@ -30,33 +29,33 @@ int main() {
         return -1;
     }
 
-    printf("I'm %d. My children are P1: %d P2: %d \n", getpid(), pid1, pid2);
+    printf("PROCESS [%d] | Children are P1: [%d] P2: [%d] \n", getpid(), pid1, pid2);
 
     if (pid1 == 0) {
-        printf("Hello from child P1 %d \n", getpid());
+        printf("PROCESS [%d] | Reads message from parent \n", getpid());
         close(rw[1]);
         read(rw[0], &pid2, sizeof(int));
         close(rw[0]);
-        printf("%d gonna terminate %d \n", getpid(), pid2);
+        printf("PROCESS [%d] | Gonna terminate [%d] \n", getpid(), pid2);
         if (pid2 != getpid()) {
-            sleep(3);
+            sleep(5);
             kill(pid2, SIGSTOP);
-            printf("%d terminated by %d \n", pid2, getpid());
+            printf("PROCESS [%d] | Terminated [%d] \n", getpid(), pid2);
         }
 
     } else if (pid1 > 0 & pid2 > 0) {
-        printf("Hello from parent %d \n", getpid());
+        printf("PROCESS [%d] | Sends the message to child [%d] \n", getpid(), pid1);
         close(rw[0]);
         write(rw[1], &pid2, sizeof(int));
         close(rw[1]);
-        int i = pid2;
+        int p = pid2;
         wait(&pid2);
-        printf("%d is terminated (%d)\n ", i, getpid());
+        printf("PROCESS [%d] | Process [%d] is terminated \n ", getpid(), p);
 
     } else if (pid2 == 0) {
-        printf("Hello from child P2 %d \n", getpid());
+        printf("PROCESS [%d] | Hello world!  \n", getpid());
         while (1) {
-            printf("I'm %d still alive \n", getpid());
+            printf("PROCESS [%d] | Still alive! \n", getpid());
             sleep(1);
         }
     }
