@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+   3063	    680	      8	   3751	    ea7	a.out
