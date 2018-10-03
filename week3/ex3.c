@@ -20,7 +20,7 @@ struct Node {
 
 void print_list(struct List *);
 
-void insert_node(struct List *, int);
+void insert_node(struct List *, int, int);
 
 int delete_node(struct List *, int);
 
@@ -93,7 +93,7 @@ void print_list(struct List *list) {
     printf("\n");
 }
 
-void insert_node(struct List *list, int data) {
+void insert_node(struct List *list, int data, int key) {
     struct Node *new = malloc(sizeof(struct Node));
     new->value = data;
     new->next = NULL;
