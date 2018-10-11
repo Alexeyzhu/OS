@@ -1,0 +1,3 @@
+Virtual address is an address that can be used by a process but there is an illusion of big amount of memory
+because MMU maps it to physical addresses that are much smaller ( amount )
+Physical address is a real address of main memory
