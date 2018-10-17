@@ -1,0 +1,3 @@
+First time in my input were only ones. It gave my 999/1 hit/miss result for all 3 frames. There was only one miss because initially table in empty.
+Then, in my input were all different numbers. It gave my 0/1000 hit/miss result for all 3 frames. All different input generates all misses.
+So, we can conclude that if we want to increase hit rate we should add more equal numbers and put them as close as possible.
