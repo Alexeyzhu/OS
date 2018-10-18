@@ -4,7 +4,7 @@
 
 typedef struct entry {
     int number;
-    char aging;
+    unsigned char aging;
     int referenced;
 } ENTRY;
 
@@ -35,7 +35,6 @@ int main() {
         exit(1);
     }
     while (fscanf(input, "%d", &num) != EOF) {
-
         int presence = check_presence(size, table, num);
 
         if (presence == -1) {
@@ -49,7 +48,8 @@ int main() {
         update_aging(table, size);
     }
 
-    printf("\nHITS/MISSES %d/%d", hit, miss);
+    printf("\nHITS/MISSES %d/%d\n", hit, miss);
+
     fclose(input);
 
     return 0;
@@ -66,10 +66,11 @@ int check_presence(int size, ENTRY *table, int num) {
 
 int remove_least_important(ENTRY *table, int size, int number) {
     int least_index = 0;
-    int least_age = 0;
-    for (int i = 1; i < size; ++i) {
+    int least_age = 999999999;
+    for (int i = 0; i < size; ++i) {
         int num = table[i].number;
-        int age = table[i].number;
+        unsigned char age = table[i].aging;
+
         if (num == -1) {
             table[i].number = number;
             table[i].aging = 0;
@@ -77,7 +78,8 @@ int remove_least_important(ENTRY *table, int size, int number) {
             return 0;
         }
 
-        if (age > least_age) {
+        if (age < least_age) {
+            least_age = age;
             least_index = i;
         }
     }
