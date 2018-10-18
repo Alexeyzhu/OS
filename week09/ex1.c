@@ -36,7 +36,6 @@ int main() {
     }
     while (fscanf(input, "%d", &num) != EOF) {
         int presence = check_presence(size, table, num);
-
         if (presence == -1) {
             remove_least_important(table, size, num);
             miss++;
@@ -44,7 +43,6 @@ int main() {
             table[presence].referenced = 1;
             hit++;
         }
-
         update_aging(table, size);
     }
 
