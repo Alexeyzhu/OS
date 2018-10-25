@@ -1,0 +1,2 @@
+/home/alexey/CLionProjects/OS/week10/_ex2.txt
+/home/alexey/CLionProjects/OS/week1/file.txt

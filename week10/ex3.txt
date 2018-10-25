@@ -1,0 +1,7 @@
+-rw-r--r-- 1 alexey alexey 13 Oct 24 16:20 _ex3.txt
+-rw-r--r-- 1 alexey alexey 13 Oct 24 16:20 _ex3.txt
+-rwxr--rwx 1 alexey alexey 13 Oct 24 16:20 _ex3.txt
+-rwxrwxrwx 1 alexey alexey 13 Oct 24 16:20 _ex3.txt
+-rw-rw---- 1 alexey alexey 13 Oct 24 16:20 _ex3.txt
+-rwxrwxr-x 1 alexey alexey 13 Oct 24 16:20 _ex3.txt
+-rwxrwxrwx 1 alexey alexey 13 Oct 24 16:20 _ex3.txt
