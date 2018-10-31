@@ -1,0 +1,5 @@
+In both cases parent process printed "Hello", but in first one child process had also non-empty buffer and printed "Hello".
+In first program parent process pushed string "Hello" in stdout buffer.
+Since stdout inherits from the parent, child process flushed it by pushing "\n"  (stdout - line-buffered).
+In second program parent process pushed string "Hello" in buffer and flushed it by "\n" symbol.
+So, child process inherited empty buffer.
