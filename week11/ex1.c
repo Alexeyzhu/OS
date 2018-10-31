@@ -1,5 +1,10 @@
 #include <stdio.h>
 #include <fcntl.h>
+#include <stdlib.h>
+#include <sys/stat.h>
+#include <zconf.h>
+#include <string.h>
+#include <sys/mman.h>
 
 int main() {
     char *word = "This is a\n"
@@ -33,7 +38,7 @@ int main() {
     if (buffer.st_size > strlen(word)) {
         memcpy(mapped, word, strlen(word));
     } else {
-        memcpy(mapped, word, buffer.st_size);
+        memcpy(mapped, word, (size_t) buffer.st_size);
     }
 
     msync(mapped, (size_t) buffer.st_size, MS_SYNC);
