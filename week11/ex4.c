@@ -32,35 +32,18 @@ int main() {
         exit(4);
     }
 
-    struct stat buffermemcpy;
-    int status2 = fstat(filedescmemcpy, &buffermemcpy);
-    if (status2 < 0) {
-        exit(5);
-    }
-
-    if (buffermemcpy.st_size < buffer.st_size) {
-        ftruncate(filedescmemcpy, buffer.st_size);
-        status2 = fstat(filedescmemcpy, &buffermemcpy);
-        if (status2 < 0) {
-            exit(5);
-        }
-    }
+    ftruncate(filedescmemcpy, buffer.st_size);
 
 
     void *mapped2;
-    mapped2 = mmap(0, (size_t) buffermemcpy.st_size, PROT_READ | PROT_WRITE, MAP_SHARED, filedescmemcpy, 0);
+    mapped2 = mmap(0, (size_t) buffer.st_size, PROT_READ | PROT_WRITE, MAP_SHARED, filedescmemcpy, 0);
     if (mapped2 == MAP_FAILED) {
         exit(6);
     }
 
-
-    if (buffer.st_size > buffermemcpy.st_size) {
-        memcpy(mapped2, mapped, (size_t) buffermemcpy.st_size);
-    } else {
-        memcpy(mapped2, mapped, (size_t) buffer.st_size);
-    }
-
-    msync(mapped2, (size_t) buffermemcpy.st_size, MS_SYNC);
+    memcpy(mapped2, mapped, (size_t) buffer.st_size);
+    msync(mapped2, (size_t) buffer.st_size, MS_SYNC);
+    munmap(mapped2, (size_t) buffer.st_size);
 
     return 0;
 }
