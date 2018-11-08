@@ -1,0 +1,77 @@
+Size of file - 6.4MB
+
+gcc copy.c -o copy.out -DBUF_SIZE=1024
+time ./copy.out fileA.txt fileB.txt
+
+real	0m0.017s
+user	0m0.000s
+sys	0m0.017s
+
+gcc copy.c -o copy.out -DBUF_SIZE=512
+time ./copy.out fileA.txt fileB.txt
+
+real	0m0.029s
+user	0m0.000s
+sys	0m0.029s
+
+gcc copy.c -o copy.out -DBUF_SIZE=256
+time ./copy.out fileA.txt fileB.txt
+
+real	0m0.051s
+user	0m0.004s
+sys	0m0.047s
+
+gcc copy.c -o copy.out -DBUF_SIZE=128
+time ./copy.out fileA.txt fileB.txt
+
+real	0m0.108s
+user	0m0.008s
+sys	0m0.100s
+
+gcc copy.c -o copy.out -DBUF_SIZE=64
+time ./copy.out fileA.txt fileB.txt
+
+real	0m0.210s
+user	0m0.028s
+sys	0m0.182s
+
+gcc copy.c -o copy.out -DBUF_SIZE=32
+time ./copy.out fileA.txt fileB.txt
+
+real	0m0.409s
+user	0m0.028s
+sys	0m0.381s
+
+When the size of buffer decrease, time of coping increasing 
+
+
+gcc copy.c -o copy.out -DBUF_SIZE=256000
+time ./copy.out tanenbaum_AC.pdf fileB.txt
+
+real	0m0.814s
+user	0m0.000s
+sys	0m0.008s
+
+gcc copy.c -o copy.out -DBUF_SIZE=25600
+time ./copy.out tanenbaum_AC.pdf fileB.txt
+
+real	0m6.995s
+user	0m0.000s
+sys	0m0.024s
+
+gcc copy.c -o copy.out -DBUF_SIZE=2560
+time ./copy.out tanenbaum_AC.pdf fileB.txt
+
+real	1m33.593s
+user	0m0.017s
+sys	0m0.167s
+
+Coping dramatically slowed down because of O_SYNC
+
+
+
+
+
+
+
+
