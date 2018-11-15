@@ -1,0 +1,14 @@
+Recovery:
+If resource is preemptable, we can take it from one process to another (but it's often difficult to find so).
+Also, we can log checkpoints of processes and roll back if resource is needed to another process, but only
+if operation made by first process were idempotent. The same situation also with the killing the process.
+So, this approach gives us an opportunity to deal with deadlocks when they occur. If there often
+only a few number of deadlocks occur saves our time a bit ( instead of computing a lot, we save a lot )
+
+Prevention:
+It's can be implemented in most cases with less expenses.
+
+Avoidance:
+In practice banker algorithm is useless because we cannot say exactly about amount
+of requirement resources, but if we know in advance how much resources are needed algo is
+quite good and simple solution that others.
